@@ -1,0 +1,645 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+@keyframes fall {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(calc(100vh + 75px));
+    }
+
+}
+
+/* MAIN LAYOUT */
+#First-Modal {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, red,white,black);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+    text-shadow: white;
+    letter-spacing: 1px;
+    width: 500px;
+    max-width: 1000px;
+}
+
+.logo {
+    font-weight: bold;
+    margin-bottom: 0px;
+    height: clamp(150px, 95vh, 450px);
+    width: auto;
+}
+
+.title {
+    color: #ff003c;
+    text-shadow: 0 0 15px black;
+    font-family: Impact, sans-serif;
+    font-weight: bold;
+    font-size: clamp(55px, 5vw, 65px);
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    transition: all 0.3s ease-in-out;
+}
+
+.title:hover {
+    transform: scale(1.05);
+    color:crimson;
+    text-shadow:
+    0 0 15px white,
+    0 0 15px red;
+}
+
+.subtitle{
+    font-family: Tahoma,sans-serif;
+    color:#e5e4e2;
+    text-shadow:
+    0 0 10px crimson,
+    0 0 10px black,
+    0 0 15px red;
+    font-size: clamp(25px,1.9vw,50px);
+    opacity: 0.7;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.subtitle:hover {
+    transform: scale(1.02);
+}
+
+.Instruction {
+    color: ghostwhite;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    transition: all 0.3s ease-in-out;
+    text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.Instruction:hover {
+    transform: scale(1.103);
+    color: white;        
+    text-shadow:
+    0 0 8px  black,
+    0 0 15px crimson,
+    0 0 15px white;        
+}
+
+/* START BUTTON */
+.start-btn {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #aa0707, #ee5a24);
+    color: white;
+    text-shadow: 0 0 15px cyan;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 220px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+    margin-top: 7px;
+}
+
+.start-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
+    background: linear-gradient(45deg, #24e4ee, #ff6b6b);
+    color: cyan;
+    text-shadow: 0 0 15px crimson;
+}
+
+.start-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: 0.5s;
+}
+
+.start-btn:hover:before {
+    left: 100%;
+}
+
+/*MIDDLE MODAL - FALLING BACKGROUND */
+
+.falling-background {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.falling-logo {
+    position: absolute;
+    width: 50px;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.falling-logo:nth-child(1) {
+    left: 10%;
+    top: -100px;
+    animation: fall 8s linear infinite;
+    animation-delay: 0s;
+}
+
+.falling-logo:nth-child(2) {
+    left: 35%;
+    top: -100px;
+    animation: fall 11s linear infinite;
+    animation-delay: 1.3s;
+}
+
+.falling-logo:nth-child(3) {
+    left: 65%;
+    top: -100px;
+    animation: fall 9s linear infinite;
+    animation-delay: 3.7s;
+}
+
+.falling-logo:nth-child(4) {
+    left: 85%;
+    top: -100px;
+    animation: fall 12s linear infinite;
+    animation-delay: 0.8s;
+}
+
+.falling-logo:nth-child(5) {
+    left: 20%;
+    top: -100px;
+    animation: fall 10s linear infinite;
+    animation-delay: 5.2s;
+}
+
+.falling-logo:nth-child(6) {
+    left: 75%;
+    top: -100px;
+    animation: fall 8s linear infinite;
+    animation-delay: 2.4s;
+}
+
+.falling-logo:nth-child(7) {
+    left: 45%;
+    top: -100px;
+    animation: fall 11s linear infinite;
+    animation-delay: 6.8s;
+}
+
+.falling-logo:nth-child(8) {
+    left: 5%;
+    top: -100px;
+    animation: fall 9s linear infinite;
+    animation-delay: 4.1s;
+}
+
+.falling-logo:nth-child(9) {
+    left: 60%;
+    top: -100px;
+    animation: fall 12s linear infinite;
+    animation-delay: 1.9s;
+}
+
+.falling-logo:nth-child(10) {
+    left: 30%;
+    top: -100px;
+    animation: fall 8s linear infinite;
+    animation-delay: 7.3s;
+}
+
+.falling-logo:nth-child(11) {
+    left: 90%;
+    top: -100px;
+    animation: fall 10s linear infinite;
+    animation-delay: 5.7s;
+}
+
+.falling-logo:nth-child(12) {
+    left: 50%;
+    top: -100px;
+    animation: fall 11s linear infinite;
+    animation-delay: 2.9s;
+}
+
+.falling-logo:nth-child(13) {
+    left: 12%;
+    top: -100px;
+    animation: fall 9s linear infinite;
+    animation-delay: 3.2s;
+}
+
+.falling-logo:nth-child(14) {
+    left: 42%;
+    top: -100px;
+    animation: fall 12s linear infinite;
+    animation-delay: 0.4s;
+}
+
+.falling-logo:nth-child(15) {
+    left: 72%;
+    top: -100px;
+    animation: fall 8s linear infinite;
+    animation-delay: 6.1s;
+}
+
+.falling-logo:nth-child(16) {
+    left: 97%;
+    top: -100px;
+    animation: fall 10s linear infinite;
+    animation-delay: 2.2s;
+}
+
+.falling-logo:nth-child(17) {
+    left: 25%;
+    top: -100px;
+    animation: fall 11s linear infinite;
+    animation-delay: 7.6s;
+}
+
+.falling-logo:nth-child(18) {
+    left: 55%;
+    top: -100px;
+    animation: fall 8s linear infinite;
+    animation-delay: 4.8s;
+}
+
+.falling-logo:nth-child(19) {
+    left: 82%;
+    top: -100px;
+    animation: fall 12s linear infinite;
+    animation-delay: 1.1s;
+}
+
+.falling-logo:nth-child(20) {
+    left: 2%;
+    top: -100px;
+    animation: fall 9s linear infinite;
+    animation-delay: 5.5s;
+}
+
+.falling-logo:nth-child(21) {
+    left: 18%;
+    top: -100px;
+    animation: fall 10s linear infinite;
+    animation-delay: 2.7s;
+}
+
+.falling-logo:nth-child(22) {
+    left: 48%;
+    top: -100px;
+    animation: fall 11s linear infinite;
+    animation-delay: 6.4s;
+}
+
+.falling-logo:nth-child(23) {
+    left: 68%;
+    top: -100px;
+    animation: fall 8s linear infinite;
+    animation-delay: 0.9s;
+}
+
+.falling-logo:nth-child(24) {
+    left: 88%;
+    top: -100px;
+    animation: fall 12s linear infinite;
+    animation-delay: 7.1s;
+}
+
+
+/*Middle Modal*/
+#Middle-Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, crimson, lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+    z-index: 10;
+}
+
+.modal-content {
+    background: linear-gradient(45deg, red, black);
+    padding: 60px;
+    border-radius: 5px;
+    text-align: center;
+    width: 50vw;
+    min-width: 500px;
+    max-width: 700px;
+}
+
+.modal-content:hover {
+    box-shadow: 0 0 10px aqua;
+}
+
+.choice-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    
+}
+
+.choice-btn {
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    z-index: 10;
+}
+
+.choice-btn:hover {
+    background: radial-gradient(circle, aqua, crimson, black);
+    box-shadow: 0 0 20px cyan;
+}
+
+
+/*DIFFICULTY MODAL*/
+
+.difficulty-modal {
+    z-index: 10;
+}
+
+.difficulty-modal-container {
+    border: 5px solid black;
+    padding: 60px;
+    border-radius: 20px;
+    background:linear-gradient(45deg, red, black); ;
+}
+
+.difficulty-text {
+    font-size: clamp(60px, 10vw, 180px);
+}
+
+.difficulty-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.difficulty-btn {
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+
+/*DIFFICULTY BUTTONS*/
+
+.easy-btn {
+    color: ghostwhite;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    background: linear-gradient(45deg, lightgreen, green);
+    transition: all 0.3 ease-in-out;
+}
+
+.easy-btn:hover {
+    transform: scale(1.103);
+    color: white;
+    background: linear-gradient(45deg, lightgreen, green, white);
+}
+
+.medium-btn {
+    color: ghostwhite;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    background: linear-gradient(45deg, lightblue, blue);
+    transition: all 0.3 ease-in-out;
+}
+
+.medium-btn:hover {
+    transform: scale(1.103);
+    color: white;
+    background: linear-gradient(45deg, lightblue, blue, white);
+}
+
+.hard-btn {
+    color: ghostwhite;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    background: linear-gradient(45deg, red, darkred);
+    transition: all 0.3 ease-in-out;
+}
+
+.hard-btn:hover {
+    transform: scale(1.103);
+    color: white;
+    background: linear-gradient(45deg, red, darkred, white);
+}
+
+.impossible-btn {
+    color: ghostwhite;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    color: red;
+    background: radial-gradient(circle, darkred, #1a1a1a);
+}
+
+.impossible-btn:hover {
+    transform: scale(1.103);
+    background: radial-gradient(circle, crimson, #1a1a1a);
+}
+
+/* GAME BOARD */
+
+#Last-Modal {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+
+}
+
+.easy-theme {
+    background: linear-gradient(135deg,
+    #84fab0,
+    #8fd3f4);
+}
+
+.easy-theme .falling-logo {
+    filter: hue-rotate(90deg);
+}
+
+
+.medium-theme {
+    background: linear-gradient(135deg,
+    #4facfe,
+    #00f2fe);
+}
+
+.medium-theme .falling-logo {
+    filter: hue-rotate(180deg);
+}
+
+
+
+.hard-theme {
+    background: linear-gradient(135deg,
+        #ff512f,
+        #dd2476);
+}
+
+.hard-theme .falling-logo {
+    filter: none;
+}
+
+
+.impossible-theme {
+    background:
+    radial-gradient(circle at center,
+    #ff0000 0%,
+    #7f1d1d 20%,
+    #2b0000 50%,
+    #000000 100%);  
+}
+
+.impossible-theme .falling-logo {
+    opacity: 0.55;
+    filter:
+    brightness(1.3) drop-shadow(0 0 10px crimson);
+}
+
+#Result-Modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: linear-gradient(45deg, red, black);
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+    width: 50vw;
+    height: 15vw;
+    max-height: 150px;
+    min-width: 500px;
+    max-width: 700px;
+    z-index: 100;
+}
+#resultText {
+    color: #ff003c;
+    text-shadow: 0 0 15px black;
+    font-family: Impact, sans-serif;
+    font-weight: bold;
+    font-size: clamp(55px, 5vw, 65px);
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#modalButtons {
+
+    
+}
+
+#playAgainBtn {
+
+}
+
+#closeBtn {
+
+}
+
+#blurOverlay {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(6px);
+
+    background: rgba(0, 0, 0, 0.2);
+
+    z-index: 99;
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    background: #111827;
+    gap: 0px;
+    z-index: 10;
+}
+
+.cell {
+    border: 2px solid #374151;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #1F2937;
+    color: white;
+}
+
+.x-cell {
+    color: #F97316;
+}
+
+.o-cell {
+    color: #38BDF8;
+}
+
+.cell:hover {
+    background-color: lightgray;
+}

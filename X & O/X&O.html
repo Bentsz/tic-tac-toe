@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X&amp;O Game</title>
+    <link rel="stylesheet" href="X%26O.css">
+</head>
+<body>
+    <div id="First-Modal">
+        <div class="header">
+        <img src="X&O Logo.png" alt="Game Logo" class="logo"> 
+        <h1 class = "title">Welcome to X&O! </h1>
+        <h3 class="subtitle">Brought to you by: The Bentsil Coporation. </h3>
+        <p class="Instruction">Click To Start</p>
+        <div class="start-button">
+        <button id="startBtn" class="start-btn">Start Game</button>
+        </div>
+        </div>
+    </div>
+        
+
+<div id="Middle-Modal">
+    <div class="falling-background">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+        <img src="X&O Logo.png" class="falling-logo">
+    </div>
+
+
+<div id="choiceModal" class="modal">
+    <div class="modal-content">
+        <h2 class="title">Choose Your Symbol</h2>
+        <p class="subtitle">Select X or O to start playing:</p>
+        <div class="choice-buttons">
+            <button style="color: #F97316;" class="choice-btn" data-symbol="X">X</button>
+            <button style="color: #38BDF8;" class="choice-btn" data-symbol="O">O</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="difficulty-modal">
+    <div class="difficulty-modal-container">
+        <h2 class="title difficulty-text">Select Difficulty</h2>
+
+        <div class="difficulty-btn-container">
+            <button class="difficulty-btn easy-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn medium-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn hard-btn" data-difficulty="hard">Hard</button>
+            <button class="difficulty-btn impossible-btn" data-difficulty="impossible">Impossible</button>
+        </div>
+    </div>
+</div>
+</div>
+    
+    <div id="Last-Modal">
+        <div class="falling-background">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+                <img src="X&O Logo.png" class="falling-logo">
+        </div>
+        <div id= 'board' class="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    <div id="blurOverlay"></div>
+    <div id="Result-Modal">
+    <h1 id="resultText">Player X Wins!</h1>
+
+    <div id="modalButtons">
+        <button id="playAgainBtn">Play Again</button>
+        <button id="closeBtn">Close</button>
+    </div>
+    </div>
+
+        </div>
+    </div>
+    <script src="X%26O.js"></script>
+</body>
+</html>
